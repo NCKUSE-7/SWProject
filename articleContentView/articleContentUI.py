@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'articleContentUI.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(500, 400)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser.setGeometry(QtCore.QRect(30, 80, 431, 271))
+        self.textBrowser.setObjectName("textBrowser")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(340, 50, 81, 21))
+        self.pushButton.setObjectName("pushButton")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(40, 20, 41, 21))
+        font = QtGui.QFont()
+        font.setFamily("AcadEref")
+        font.setPointSize(14)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.label_title = QtWidgets.QLabel(self.centralwidget)
+        self.label_title.setGeometry(QtCore.QRect(100, 20, 181, 21))
+        self.label_title.setObjectName("label_title")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 500, 18))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdsssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdsssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdsssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdsssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss fdssssssssssssssssssssssssssssssssssssssssss</p></body></html>"))
+        self.pushButton.setText(_translate("MainWindow", "文章列表"))
+        self.label_2.setText(_translate("MainWindow", "標題:"))
+        self.label_title.setText(_translate("MainWindow", "TextLabel"))
