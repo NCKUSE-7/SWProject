@@ -1,0 +1,1 @@
+# Folder for put downloaded picture
