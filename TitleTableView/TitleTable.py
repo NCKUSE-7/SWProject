@@ -48,8 +48,11 @@ class TitleTableWindow(QMainWindow):
 
     def getTitleAndArticleContent(self):
 
-        with open('crawler/output.json', 'r',encoding='utf-8') as f:
+        #with open('crawler/output.json', 'r',encoding='utf-8') as f:
+        with open('output.json', 'r',encoding='utf-8') as f:
             data = f.readlines()
+
+        f.close()
         for article in data:
             article=article[0:len(article)-2]
             article=json.loads(article)

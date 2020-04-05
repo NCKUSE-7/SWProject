@@ -23,6 +23,12 @@
       <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>PushButton</string>
     </property>
@@ -35,6 +41,12 @@
       <width>900</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>PushButton</string>
@@ -49,6 +61,12 @@
       <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>PushButton</string>
     </property>
@@ -61,6 +79,12 @@
       <width>900</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>PushButton</string>
@@ -75,6 +99,12 @@
       <height>100</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>PushButton</string>
     </property>
@@ -87,6 +117,12 @@
       <width>900</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>PushButton</string>
@@ -101,6 +137,12 @@
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>上頁</string>
     </property>
@@ -113,6 +155,12 @@
       <width>141</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>下頁</string>
@@ -127,6 +175,12 @@
       <height>101</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>回首頁</string>
     </property>
@@ -139,6 +193,12 @@
       <width>221</width>
       <height>121</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>3ds</family>
+      <pointsize>14</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>更新內容</string>
