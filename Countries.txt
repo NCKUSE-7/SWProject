@@ -1,0 +1,211 @@
+USA
+China
+Spain
+Italy
+Germany
+France
+Iran
+UK
+Turkey
+Belgium
+Switzerland
+Netherlands
+Canada
+Brazil
+Portugal
+Austria
+S. Korea
+Israel
+Russia
+Sweden
+Norway
+Australia
+Ireland
+India
+Denmark
+Chile
+Czechia
+Poland
+Romania
+Japan
+Pakistan
+Malaysia
+Ecuador
+Philippines
+Luxembourg
+Indonesia
+Peru
+Saudi Arabia
+Mexico
+Serbia
+UAE
+Finland
+Thailand
+Panama
+Qatar
+Dominican Republic
+Greece
+Colombia
+South Africa
+Argentina
+Ukraine
+Singapore
+Iceland
+Algeria
+Egypt
+Croatia
+Morocco
+New Zealand
+Estonia
+Iraq
+Slovenia
+Belarus
+Moldova
+Hong Kong
+Lithuania
+Hungary
+Armenia
+Kuwait
+Bahrain
+Bosnia and Herzegovina
+Azerbaijan
+Diamond Princess
+Kazakhstan
+Cameroon
+Tunisia
+North Macedonia
+Bulgaria
+Slovakia
+Latvia
+Lebanon
+Andorra
+Uzbekistan
+Cyprus
+Costa Rica
+Uruguay
+Afghanistan
+Oman
+Albania
+Cuba
+Burkina Faso
+Taiwan
+Réunion
+Jordan
+Ivory Coast
+Channel Islands
+Honduras
+Malta
+Ghana
+San Marino
+Niger
+Kyrgyzstan
+Mauritius
+Palestine
+Nigeria
+Vietnam
+Montenegro
+Senegal
+Bangladesh
+Bolivia
+Georgia
+Sri Lanka
+Faeroe Islands
+DRC
+Kenya
+Mayotte
+Venezuela
+Isle of Man
+Martinique
+Guinea
+Guadeloupe
+Brunei 
+Djibouti
+Paraguay
+Cambodia
+Gibraltar
+Trinidad and Tobago
+Rwanda
+El Salvador
+Madagascar
+Guatemala
+Monaco
+Liechtenstein
+French Guiana
+Aruba
+Togo
+Barbados
+Jamaica
+Mali
+Ethiopia
+Uganda
+French Polynesia
+Congo
+Cayman Islands
+Macao
+Sint Maarten
+Bermuda
+Zambia
+Bahamas
+Guyana
+Guinea-Bissau
+Saint Martin
+Eritrea
+Gabon
+Benin
+Haiti
+Tanzania
+Myanmar
+Libya
+Antigua and Barbuda
+Syria
+Maldives
+New Caledonia
+Angola
+Equatorial Guinea
+Mongolia
+Namibia
+Dominica
+Fiji
+Laos
+Liberia
+Sudan
+Saint Lucia
+Curaçao
+Grenada
+Zimbabwe
+Greenland
+Saint Kitts and Nevis
+Seychelles
+Suriname
+Chad
+Mozambique
+Eswatini
+MS Zaandam
+Nepal
+Montserrat
+Malawi
+Turks and Caicos
+CAR
+St. Vincent Grenadines
+Somalia
+Belize
+Cabo Verde
+Vatican City
+Sierra Leone
+Botswana
+Mauritania
+Nicaragua
+St. Barth
+Bhutan
+Gambia
+Sao Tome and Principe
+Western Sahara
+Anguilla
+British Virgin Islands
+Burundi
+Caribbean Netherlands
+Falkland Islands
+Papua New Guinea
+South Sudan
+Saint Pierre Miquelon
+Timor-Leste
