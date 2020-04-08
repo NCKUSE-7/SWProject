@@ -99,6 +99,7 @@ class MyGroupBox(QtWidgets.QGroupBox):
 '''
 class Ui_MainWindow(object):
     webImageDict = {} # 佔存title對應的圖片，格式為 {標題: QPixmap()}
+    curPath = str(pathlib.Path(__file__).parent.absolute()) # 設定絕對路徑 (因為執行後路徑是main.py的執行路徑)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -125,10 +126,9 @@ class Ui_MainWindow(object):
 
         ##### My Code #####
         MainWindow.setStyleSheet("QMainWindow {background: 'white';}") # 將背景轉成白色
-        self.curPath = str(pathlib.Path(__file__).parent.absolute())   # 設定絕對路徑 (因為執行後路徑是main.py的執行路徑)
-        self.label_bbc_logo.setPixmap(QtGui.QPixmap(self.curPath+'/src/BBC.png'))  # 設定白色的BBC logo
+        self.label_bbc_logo.setPixmap(QtGui.QPixmap(Ui_MainWindow.curPath+'/src/BBC.png'))  # 設定白色的BBC logo
         self.label_bbc_logo.mousePressEvent = self.Clicked_label_bbc_logo # 讓白色的BBC logo能被按
-        self.label_bbc_red_bar.setPixmap(QtGui.QPixmap(self.curPath+'/src/NEWS_Chinese.png')) # 設定紅色的BBC logo
+        self.label_bbc_red_bar.setPixmap(QtGui.QPixmap(Ui_MainWindow.curPath+'/src/NEWS_Chinese.png')) # 設定紅色的BBC logo
         self.label_bbc_red_bar.mousePressEvent = self.Clicked_label_bbc_red_bar # 讓紅色的BBC logo能被按
         ####################
 
@@ -158,8 +158,8 @@ class Ui_MainWindow(object):
     '''
     def PreLoad(self):
         import os
-        if os.path.exists(self.curPath + "/src/data.json"):     # 如果有data.json這個檔案
-            with open(self.curPath+'/src/data.json', 'r') as f: # 開啟檔案
+        if os.path.exists(Ui_MainWindow.curPath + "/src/data.json"):     # 如果有data.json這個檔案
+            with open(Ui_MainWindow.curPath+'/src/data.json', 'r') as f: # 開啟檔案
                 returnData = json.load(f)                       # 讀取到returnData
 
             for key, values in returnData.items(): # 將資訊抓出來
