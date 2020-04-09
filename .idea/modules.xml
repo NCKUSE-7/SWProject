@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SWProject.iml" filepath="$PROJECT_DIR$/.idea/SWProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SWProject-FlightInform/.idea/flightinfo.iml" filepath="$PROJECT_DIR$/../SWProject-FlightInform/.idea/flightinfo.iml" />
     </modules>
   </component>
 </project>

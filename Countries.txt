@@ -18,34 +18,34 @@ S. Korea
 Israel
 Russia
 Sweden
-Norway
-Australia
 Ireland
+Australia
+Norway
 India
-Denmark
 Chile
+Denmark
 Czechia
 Poland
 Romania
 Japan
+Ecuador
+Peru
 Pakistan
 Malaysia
-Ecuador
 Philippines
+Mexico
 Luxembourg
 Indonesia
-Peru
 Saudi Arabia
-Mexico
 Serbia
 UAE
+Panama
 Finland
 Thailand
-Panama
 Qatar
 Dominican Republic
-Greece
 Colombia
+Greece
 South Africa
 Argentina
 Ukraine
@@ -56,85 +56,85 @@ Egypt
 Croatia
 Morocco
 New Zealand
-Estonia
 Iraq
+Estonia
+Moldova
 Slovenia
 Belarus
-Moldova
 Hong Kong
 Lithuania
 Hungary
 Armenia
 Kuwait
 Bahrain
-Bosnia and Herzegovina
 Azerbaijan
-Diamond Princess
-Kazakhstan
+Bosnia and Herzegovina
 Cameroon
+Kazakhstan
+Diamond Princess
+Slovakia
 Tunisia
 North Macedonia
 Bulgaria
-Slovakia
 Latvia
 Lebanon
 Andorra
 Uzbekistan
 Cyprus
 Costa Rica
+Cuba
 Uruguay
 Afghanistan
 Oman
-Albania
-Cuba
 Burkina Faso
+Albania
+Ivory Coast
 Taiwan
 Réunion
 Jordan
-Ivory Coast
 Channel Islands
 Honduras
-Malta
+Niger
 Ghana
 San Marino
-Niger
-Kyrgyzstan
-Mauritius
-Palestine
+Malta
 Nigeria
+Mauritius
+Kyrgyzstan
+Bolivia
+Palestine
 Vietnam
 Montenegro
 Senegal
 Bangladesh
-Bolivia
 Georgia
 Sri Lanka
+Mayotte
 Faeroe Islands
 DRC
 Kenya
-Mayotte
 Venezuela
+Guinea
 Isle of Man
 Martinique
-Guinea
 Guadeloupe
 Brunei 
 Djibouti
+Gibraltar
 Paraguay
 Cambodia
-Gibraltar
-Trinidad and Tobago
 Rwanda
+Trinidad and Tobago
 El Salvador
 Madagascar
 Guatemala
+French Guiana
 Monaco
 Liechtenstein
-French Guiana
 Aruba
 Togo
-Barbados
 Jamaica
+Barbados
 Mali
 Ethiopia
 Uganda
@@ -142,61 +142,62 @@ French Polynesia
 Congo
 Cayman Islands
 Macao
+Bahamas
 Sint Maarten
 Bermuda
 Zambia
-Bahamas
 Guyana
+Gabon
+Eritrea
 Guinea-Bissau
 Saint Martin
-Eritrea
-Gabon
-Benin
+Liberia
 Haiti
+Benin
 Tanzania
 Myanmar
 Libya
+Angola
 Antigua and Barbuda
 Syria
 Maldives
-New Caledonia
-Angola
 Equatorial Guinea
+New Caledonia
+Mozambique
 Mongolia
 Namibia
 Dominica
 Fiji
 Laos
-Liberia
 Sudan
-Saint Lucia
 Curaçao
+Saint Lucia
+Somalia
 Grenada
+Eswatini
 Zimbabwe
 Greenland
 Saint Kitts and Nevis
 Seychelles
 Suriname
 Chad
-Mozambique
-Eswatini
 MS Zaandam
 Nepal
 Montserrat
+Belize
 Malawi
 Turks and Caicos
 CAR
-St. Vincent Grenadines
-Somalia
-Belize
-Cabo Verde
 Vatican City
+St. Vincent Grenadines
+Cabo Verde
 Sierra Leone
 Botswana
 Mauritania
 Nicaragua
 St. Barth
 Bhutan
+Falkland Islands
 Gambia
 Sao Tome and Principe
 Western Sahara
@@ -204,7 +205,6 @@ Anguilla
 British Virgin Islands
 Burundi
 Caribbean Netherlands
-Falkland Islands
 Papua New Guinea
 South Sudan
 Saint Pierre Miquelon

@@ -15,7 +15,9 @@ def crawler():
     tStart = time.time()
     option = webdriver.ChromeOptions()
     option.headless = True
-    browser = webdriver.Chrome(options=option)
+    browser = webdriver.Chrome('C:/Users/user/PycharmProjects/SWProject/VirusCrawler/venv/Scripts/chromedriver',options=option)
+    #browser = webdriver.Chrome('C:\Code\\flightinfo\\venv\Scripts\chromedriver',options=option)
+    #browser = webdriver.Chrome(options=option)
     url = "https://www.taoyuan-airport.com/main_ch/revised_flight.aspx?uid=159&pid=12"
     unloaded = True
     while unloaded:
@@ -60,11 +62,11 @@ def crawler():
                 break
     flight_info_jason = json.dumps(flight_info, ensure_ascii=False, separators=(',\n', ' : '))
     print(flight_info_jason)
-    with open('fi_out.json', 'w',encoding = 'utf-8') as file:
+    with open('fi_out.json', 'w') as file:
         file.write(flight_info_jason)
     tEnd = time.time()
     print("It cost %.2f sec" % (tEnd - tStart))
-    file.close()
     return flight_info_jason
-if __name__=="__main__":
+
+if __name__ == "__main__":
     crawler()

@@ -6,8 +6,8 @@ import cv2
 from PIL import Image
 from PIL.ImageQt import ImageQt
 from PyQt5 import QtCore, QtGui, QtWidgets
-from VirusCrawlerCode import crawler
-from VirusCrawlerUI import Ui_Flight
+from VirusCrawler.VirusCrawlerCode import crawler
+from VirusCrawler.VirusCrawlerUI import Ui_Flight
 #import VirusCrawlerCode
 
 
@@ -32,8 +32,7 @@ class Flight(QtWidgets.QMainWindow):
                     x = url.split('/')
 #                    data = urllib.request.urlopen(url).read()
 #                    image = QtGui.QImage()
-                    image = Image.open('./pic/' + x[5])
-
+                    image = Image.open('C:\Code\VirusCrawler\pic\\' + x[5])
                     qimage = ImageQt(image)
 #                    image.loadFromData(x[5])
                     icon = QtGui.QIcon()
@@ -59,7 +58,7 @@ class Flight(QtWidgets.QMainWindow):
 #       self.ui.search.clicked.connect(self.handleButton)   #search button ( not completed
 
 def itemActivated_event(item):
-    json_file = open("C:\Code\VirusCrawler\jsonfiles\FlightUrl", "r", encoding='utf-8')
+    json_file = open("C:\Code\flightinfo\VirusCrawler\jsonfiles\FlightUrl", "r", encoding='utf-8')
     Flight.FData = json.load(json_file)
     json_file.close()
     if item.text() == '全亞州航空' or item.text() == '中華航空' or item.text() == '馬來西亞' or item.text() == '泰國獅子航空' or item.text() == '土耳其航空' \

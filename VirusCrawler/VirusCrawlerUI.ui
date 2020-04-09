@@ -13,59 +13,39 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="background">
+  <widget class="QPushButton" name="main">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>2</x>
      <y>0</y>
-     <width>1200</width>
-     <height>900</height>
+     <width>125</width>
+     <height>50</height>
     </rect>
    </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>pic/abstract-blue-geometric-shapes-background_1035-17545.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="flightinfo">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>460</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
-    <string>flightinfo</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="return_but">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>main</string>
+    <string>Main</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="flighttable">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>100</y>
+     <y>50</y>
      <width>1200</width>
-     <height>900</height>
+     <height>950</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="inputMethodHints">
     <set>Qt::ImhNone</set>
@@ -80,17 +60,27 @@
     <set>QAbstractItemView::NoEditTriggers</set>
    </property>
    <property name="rowCount">
-    <number>90</number>
+    <number>100</number>
    </property>
    <property name="columnCount">
     <number>6</number>
    </property>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>150</number>
+    <number>190</number>
    </attribute>
    <attribute name="verticalHeaderDefaultSectionSize">
     <number>40</number>
    </attribute>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
    <row/>
    <row/>
    <row/>
@@ -215,44 +205,27 @@
   <widget class="QPushButton" name="reload">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
+     <x>150</x>
+     <y>0</y>
+     <width>125</width>
+     <height>50</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
-    <string>reload</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="search">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>search</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>20</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
+    <string>Reload</string>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>return_but</sender>
+   <sender>main</sender>
    <signal>clicked()</signal>
    <receiver>flighttable</receiver>
    <slot>hide()</slot>
@@ -264,54 +237,6 @@
     <hint type="destinationlabel">
      <x>599</x>
      <y>549</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>flightinfo</sender>
-   <signal>clicked()</signal>
-   <receiver>flighttable</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>536</x>
-     <y>473</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>599</x>
-     <y>549</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>flightinfo</sender>
-   <signal>clicked()</signal>
-   <receiver>search</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>536</x>
-     <y>473</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>576</x>
-     <y>33</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>flightinfo</sender>
-   <signal>clicked()</signal>
-   <receiver>textEdit</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>536</x>
-     <y>473</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>435</x>
-     <y>35</y>
     </hint>
    </hints>
   </connection>
