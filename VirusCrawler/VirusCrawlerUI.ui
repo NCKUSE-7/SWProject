@@ -13,38 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="background">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1200</width>
-     <height>900</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>pic/abstract-blue-geometric-shapes-background_1035-17545.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="flightinfo">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>460</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>flightinfo</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="main">
    <property name="geometry">
     <rect>
@@ -67,6 +35,12 @@
      <height>900</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="inputMethodHints">
     <set>Qt::ImhNone</set>
    </property>
@@ -80,17 +54,27 @@
     <set>QAbstractItemView::NoEditTriggers</set>
    </property>
    <property name="rowCount">
-    <number>90</number>
+    <number>100</number>
    </property>
    <property name="columnCount">
     <number>6</number>
    </property>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>150</number>
+    <number>175</number>
    </attribute>
    <attribute name="verticalHeaderDefaultSectionSize">
     <number>40</number>
    </attribute>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
    <row/>
    <row/>
    <row/>
@@ -264,54 +248,6 @@
     <hint type="destinationlabel">
      <x>599</x>
      <y>549</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>flightinfo</sender>
-   <signal>clicked()</signal>
-   <receiver>flighttable</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>536</x>
-     <y>473</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>599</x>
-     <y>549</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>flightinfo</sender>
-   <signal>clicked()</signal>
-   <receiver>search</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>536</x>
-     <y>473</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>576</x>
-     <y>33</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>flightinfo</sender>
-   <signal>clicked()</signal>
-   <receiver>textEdit</receiver>
-   <slot>show()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>536</x>
-     <y>473</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>435</x>
-     <y>35</y>
     </hint>
    </hints>
   </connection>

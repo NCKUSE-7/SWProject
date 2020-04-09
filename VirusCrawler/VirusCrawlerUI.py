@@ -32,7 +32,7 @@ class Ui_Flight(object):
         self.flighttable.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.flighttable.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.flighttable.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.flighttable.setRowCount(90)
+        self.flighttable.setRowCount(110)
         self.flighttable.setColumnCount(6)
         self.flighttable.setObjectName("flighttable")
         item = QtWidgets.QTableWidgetItem()
