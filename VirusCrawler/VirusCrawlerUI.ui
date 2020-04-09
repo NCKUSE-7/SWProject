@@ -16,23 +16,29 @@
   <widget class="QPushButton" name="main">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
+     <x>2</x>
+     <y>0</y>
+     <width>125</width>
+     <height>50</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>main</string>
+    <string>Main</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="flighttable">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>100</y>
+     <y>50</y>
      <width>1200</width>
-     <height>900</height>
+     <height>950</height>
     </rect>
    </property>
    <property name="font">
@@ -60,7 +66,7 @@
     <number>6</number>
    </property>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>175</number>
+    <number>190</number>
    </attribute>
    <attribute name="verticalHeaderDefaultSectionSize">
     <number>40</number>
@@ -199,37 +205,20 @@
   <widget class="QPushButton" name="reload">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
+     <x>150</x>
+     <y>0</y>
+     <width>125</width>
+     <height>50</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微軟正黑體</family>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
-    <string>reload</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="search">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>20</y>
-     <width>93</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>search</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>20</y>
-     <width>151</width>
-     <height>31</height>
-    </rect>
+    <string>Reload</string>
    </property>
   </widget>
  </widget>

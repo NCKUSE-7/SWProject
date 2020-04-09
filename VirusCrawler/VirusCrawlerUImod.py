@@ -10,16 +10,15 @@ from VirusCrawler.VirusCrawlerUI import Ui_Flight
 class Flight(QtWidgets.QMainWindow):
     def __init__(self):
         super(Flight, self).__init__()
-        #        json_file = json.loads(crawler())
-        #        json_file = open(self.craw, "r", encoding='utf-8')
-        #        self.FData = json.loads(json_file, encoding='utf-8')
         self.ui = Ui_Flight()
         self.ui.setupUi(self)
-        self.ui.flighttable.hide()
-        self.ui.search.hide()
-        self.ui.textEdit.hide()
+#        self.ui.flighttable.hide()
         self.ui.retranslateUi(Fl)
         self._translate = QtCore.QCoreApplication.translate
+        self.ui.flighttable.setColumnWidth(0, 125)
+        self.ui.flighttable.setColumnWidth(1, 125)
+        self.ui.flighttable.setColumnWidth(2, 220)
+        self.ui.flighttable.setColumnWidth(5, 125)
         self.loaddata()
 
     def loaddata(self) :
