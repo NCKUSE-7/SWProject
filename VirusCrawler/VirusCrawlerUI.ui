@@ -223,22 +223,5 @@
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>main</sender>
-   <signal>clicked()</signal>
-   <receiver>flighttable</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>76</x>
-     <y>33</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>599</x>
-     <y>549</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
