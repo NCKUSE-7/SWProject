@@ -4,8 +4,6 @@ from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
 from WHO.WHOUI import Ui_MainWindow
-
-from PyQt5.QtCore import *
 import json
 import sys
 import random
@@ -14,11 +12,7 @@ tTotalcases='0'
 
 class MainWindow(QtWidgets.QMainWindow):
 
-    goBackToStartupSignal = pyqtSignal()
 
-    def goBackToStartup(self):
-        self.goBackToStartupSignal.emit()
-        self.close()
     def __init__(self):
         super(MainWindow,self).__init__()
         self.ui = Ui_MainWindow()
@@ -41,7 +35,7 @@ class MainWindow(QtWidgets.QMainWindow):
         #設定選項(離開)
         self.ui.retranslateUi(self)
         self.ui.actionClose.setShortcut('Esc')
-        #self.ui.actionClose.triggered.connect(app.exit)
+        self.ui.actionClose.triggered.connect(app.exit)
         # 設定ComboBox
       #  choices = ['','病例數','死亡人數','痊癒人數']
       #  self.ui.comboBox.addItems(choices)
@@ -122,13 +116,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.pushButton_2.setFont(QtGui.QFont('標楷體', 30))
         self.ui.pushButton.setFont(QtGui.QFont('標楷體', 25))
 
-        pixmap = QPixmap("D:\PYQT\德賽.jpg")  # 按指定路径找到图片，注意路径必须用双引号包围，不能用单引号
+        pixmap = QPixmap("德賽.jpg")  # 按指定路径找到图片，注意路径必须用双引号包围，不能用单引号
         self.ui.label.setPixmap(pixmap)
        # self.ui.label_2.setText('台灣目前的')
         self.ui.label_3.setText('COVID-19 Situation Table')
         #self.ui.pushButton_3.setText('台灣目前狀態')
         self.ui.pushButton_2.setText('回首頁')
-        self.ui.pushButton_2.clicked.connect(self.goBackToStartup)
         self.ui.pushButton.setText("刷新")
 
 
@@ -171,9 +164,15 @@ class MainWindow(QtWidgets.QMainWindow):
         Countries = root.find_all("td", style="font-weight: bold; font-size:15px; text-align:left;")
         Main = root.find_all("td")
 
+        Main_list = []
         china = []
-        for i in range(9):
-            china.append(str(Main[(int)(len(Main) / 2) - 19 + i].string))
+        for i in range(len(Main)):
+            Main_list.append(str(Main[i].string))
+
+            if str(Main[i].string) == "China":
+                for j in range(9):
+                    china.append(str(Main[i + j + 1].string))
+
         china_num = china[0].split(',')
 
         Count = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -182,7 +181,7 @@ class MainWindow(QtWidgets.QMainWindow):
             if Country.string == "China":
                 break
             check = 0
-            country_num = str(Main[Count[1]].string).split(',')
+            country_num = str(Main[Main_list.index(str(Country.string)) + 1].string).split(',')
             if check_re == 1:
                 check = 0
             elif len(china_num) > len(country_num):
@@ -210,17 +209,15 @@ class MainWindow(QtWidgets.QMainWindow):
                 TotDeaths1M.write(china[8] + "\n")
 
             Countries_two.write(str(Country.string) + "\n")
-            TotalCases.write(str(Main[Count[1]].string) + "\n")
-            NewCases.write(str(Main[Count[2]].string) + "\n")
-            TotalDeaths.write(str(Main[Count[3]].string) + "\n")
-            NewDeaths.write(str(Main[Count[4]].string) + "\n")
-            TotalRecovered.write(str(Main[Count[5]].string) + "\n")
-            ActiveCases.write(str(Main[Count[6]].string) + "\n")
-            SeriousCritical.write(str(Main[Count[7]].string) + "\n")
-            TotCases1M.write(str(Main[Count[8]].string) + "\n")
-            TotDeaths1M.write(str(Main[Count[9]].string) + "\n")
-            for i in range(10):
-                Count[i] = Count[i] + 10
+            TotalCases.write(str(Main[Main_list.index(str(Country.string)) + 1].string) + "\n")
+            NewCases.write(str(Main[Main_list.index(str(Country.string)) + 2].string) + "\n")
+            TotalDeaths.write(str(Main[Main_list.index(str(Country.string)) + 3].string) + "\n")
+            NewDeaths.write(str(Main[Main_list.index(str(Country.string)) + 4].string) + "\n")
+            TotalRecovered.write(str(Main[Main_list.index(str(Country.string)) + 5].string) + "\n")
+            ActiveCases.write(str(Main[Main_list.index(str(Country.string)) + 6].string) + "\n")
+            SeriousCritical.write(str(Main[Main_list.index(str(Country.string)) + 7].string) + "\n")
+            TotCases1M.write(str(Main[Main_list.index(str(Country.string)) + 8].string) + "\n")
+            TotDeaths1M.write(str(Main[Main_list.index(str(Country.string)) + 9].string) + "\n")
 
         Total_case.close()
         Countries_two.close()
@@ -233,7 +230,6 @@ class MainWindow(QtWidgets.QMainWindow):
         SeriousCritical.close()
         TotCases1M.close()
         TotDeaths1M.close()
-
     # Web_Crawler()
 
 
