@@ -9,9 +9,14 @@ import sys
 import random
 number=0
 tTotalcases='0'
+from PyQt5.QtCore import *
 
 class MainWindow(QtWidgets.QMainWindow):
+    goBackToStartupSignal = pyqtSignal()
 
+    def goBackToStartup(self):
+        self.goBackToStartupSignal.emit()
+        self.close()
 
     def __init__(self):
         super(MainWindow,self).__init__()
@@ -35,7 +40,7 @@ class MainWindow(QtWidgets.QMainWindow):
         #設定選項(離開)
         self.ui.retranslateUi(self)
         self.ui.actionClose.setShortcut('Esc')
-        self.ui.actionClose.triggered.connect(app.exit)
+        #self.ui.actionClose.triggered.connect(app.exit)
         # 設定ComboBox
       #  choices = ['','病例數','死亡人數','痊癒人數']
       #  self.ui.comboBox.addItems(choices)
@@ -122,6 +127,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.label_3.setText('COVID-19 Situation Table')
         #self.ui.pushButton_3.setText('台灣目前狀態')
         self.ui.pushButton_2.setText('回首頁')
+        self.ui.pushButton_2.clicked.connect(self.goBackToStartup)
         self.ui.pushButton.setText("刷新")
 
 
