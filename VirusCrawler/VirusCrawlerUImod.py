@@ -29,14 +29,19 @@ class Flight(QtWidgets.QMainWindow):
         for i in range(num):
             for j in range(6):
                 if j == 3:
+
                     url = self.FData["flight" + str(i)][2]  #'https://web.taoyuan-airport.com/upload/airlogo/CI.gif'
 #                   data = urllib.request.urlopen(url).read()
                     x = url.split('/')
-                    image = Image.open('C:\Code\\flightinfo\VirusCrawler\pic\\' + x[5])
-                    qimage = ImageQt(image)
-                    icon = QtGui.QIcon()
-                    icon.addPixmap(QtGui.QPixmap.fromImage(qimage), QtGui.QIcon.Normal, QtGui.QIcon.On)
-                    self.ui.item.setIcon(icon)
+                    try:
+                        image = Image.open('C:\Code\\flightinfo\VirusCrawler\pic\\' + x[5])
+                        qimage = QtGui.QPixmap.fromImage(ImageQt(image))
+                        icon = QtGui.QIcon()
+                        icon.addPixmap(qimage, QtGui.QIcon.Normal, QtGui.QIcon.On)
+                        self.ui.item.setIcon(icon)
+                    except IOError:
+                        print('There is no file named', x[5])
+
                     self.ui.flighttable.setItem(0, j, self.ui.item)
 #--------------------------------------------
 #                    image = QtGui.QImage()
@@ -66,6 +71,7 @@ class Flight(QtWidgets.QMainWindow):
         json_file = open("C:\Code\\flightinfo\VirusCrawler\jsonfiles\FlightUrl", "r", encoding='utf-8')
         Flight.FData = json.load(json_file)
         json_file.close()
+
         if (item.text() == '全亞州航空' or item.text() == '中華航空' or item.text() == '馬來西亞' or item.text() == '泰國獅子航空' or item.text() == '土耳其航空' \
                 or item.text() == '達美航空' or item.text() == '泰國航空' or item.text() == '香港航空' or item.text() == '日本航空' or item.text() == '越南航空' \
                 or item.text() == '紐西蘭航空' or item.text() == '印度航空' or item.text() == '酷鳥航空' or item.text() == '夏威夷航空' or item.text() == '長榮航空' \
@@ -74,7 +80,7 @@ class Flight(QtWidgets.QMainWindow):
                 or item.text() == '勝安航空' or item.text() == '馬印航空' or item.text() == '國泰港龍' or item.text() == '菲律賓航空' or item.text() == '大韓航空' \
                 or item.text() == '韓亞航空' or item.text() == '酷航' or item.text() == '樂桃航空' or item.text() == '巴拿馬航空' or item.text() == '荷蘭航空' \
                 or item.text() == '加拿大航空' or item.text() =='澳洲航空' or item.text() == '巴澤航空' or item.text() == '德國航空' or item.text() == '以色列航空')\
-                or item.text() == '真航空' or item.text() == '中國國際':
+                or item.text() == '真航空' or item.text() == '中國國際' or item.text() == '華信航空':
             QtGui.QDesktopServices.openUrl(QtCore.QUrl(Flight.FData[item.text()]))
         else:
             print(item.text())
