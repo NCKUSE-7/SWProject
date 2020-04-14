@@ -35,18 +35,23 @@ class Flight(QtWidgets.QMainWindow):
                 self.FData = json.load(f, encoding='utf-8')
         num = len(self.FData)
         self.ui.flighttable.setRowCount(num)
+
         for i in range(num):
             for j in range(6):
                 if j == 3:
-                    url = self.FData["flight" + str(i)][2]  #'https://web.taoyuan-airport.com/upload/airlogo/CI.gif'
+
+                    url = self.FData["flight" + str(i)][2]  # 'https://web.taoyuan-airport.com/upload/airlogo/CI.gif'
 #                   data = urllib.request.urlopen(url).read()
                     x = url.split('/')
-                    #"C: / Users / user / PycharmProjects / SWProject / VirusCrawler / fi_out.json"
-                    image = Image.open('C:/Users/user/PycharmProjects/SWProject-FlightInform/VirusCrawler/pic/' + x[5])
-                    qimage = ImageQt(image)
-                    icon = QtGui.QIcon()
-                    icon.addPixmap(QtGui.QPixmap.fromImage(qimage), QtGui.QIcon.Normal, QtGui.QIcon.On)
-                    self.ui.item.setIcon(icon)
+                    try:  # prevent error caused by no local logo files
+                        image = Image.open('C:/Users/user/PycharmProjects/SWProject-FlightInform/VirusCrawler/pic/' + x[5])
+                        qimage = QtGui.QPixmap.fromImage(ImageQt(image))
+                        icon = QtGui.QIcon()
+                        icon.addPixmap(qimage, QtGui.QIcon.Normal, QtGui.QIcon.On)
+                        self.ui.item.setIcon(icon)
+                    except IOError:
+                        print('There is no file named', x[5])
+
                     self.ui.flighttable.setItem(0, j, self.ui.item)
 #--------------------------------------------
 #                    image = QtGui.QImage()
@@ -84,7 +89,7 @@ class Flight(QtWidgets.QMainWindow):
                 or item.text() == '勝安航空' or item.text() == '馬印航空' or item.text() == '國泰港龍' or item.text() == '菲律賓航空' or item.text() == '大韓航空' \
                 or item.text() == '韓亞航空' or item.text() == '酷航' or item.text() == '樂桃航空' or item.text() == '巴拿馬航空' or item.text() == '荷蘭航空' \
                 or item.text() == '加拿大航空' or item.text() =='澳洲航空' or item.text() == '巴澤航空' or item.text() == '德國航空' or item.text() == '以色列航空')\
-                or item.text() == '真航空':
+                or item.text() == '真航空' or item.text() == '中國國際' or item.text() == '華信航空' or item.text() == '澳門航空':
             QtGui.QDesktopServices.openUrl(QtCore.QUrl(Flight.FData[item.text()]))
         else:
             print(item.text())
