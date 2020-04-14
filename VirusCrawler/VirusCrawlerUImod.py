@@ -33,7 +33,7 @@ class Flight(QtWidgets.QMainWindow):
                     url = self.FData["flight" + str(i)][2]  #'https://web.taoyuan-airport.com/upload/airlogo/CI.gif'
 #                   data = urllib.request.urlopen(url).read()
                     x = url.split('/')
-                    try:
+                    try: # prevent error caused by no local logo files
                         image = Image.open('C:\Code\\flightinfo\VirusCrawler\pic\\' + x[5])
                         qimage = QtGui.QPixmap.fromImage(ImageQt(image))
                         icon = QtGui.QIcon()
