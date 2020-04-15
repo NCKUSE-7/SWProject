@@ -80,7 +80,9 @@ class Flight(QtWidgets.QMainWindow):
                 or item.text() == '勝安航空' or item.text() == '馬印航空' or item.text() == '國泰港龍' or item.text() == '菲律賓航空' or item.text() == '大韓航空' \
                 or item.text() == '韓亞航空' or item.text() == '酷航' or item.text() == '樂桃航空' or item.text() == '巴拿馬航空' or item.text() == '荷蘭航空' \
                 or item.text() == '加拿大航空' or item.text() =='澳洲航空' or item.text() == '巴澤航空' or item.text() == '德國航空' or item.text() == '以色列航空')\
-                or item.text() == '真航空' or item.text() == '中國國際' or item.text() == '華信航空':
+                or item.text() == '真航空' or item.text() == '中國國際' or item.text() == '華信航空' or item.text() == '澳門航空' :
+            QtGui.QDesktopServices.openUrl(QtCore.QUrl(Flight.FData[item.text()]))
+        elif ( item.text() == '亞庇' or item.text() == '廊曼'):
             QtGui.QDesktopServices.openUrl(QtCore.QUrl(Flight.FData[item.text()]))
         else:
             print(item.text())
