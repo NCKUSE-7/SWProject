@@ -10,7 +10,9 @@ from TitleTableView import TitelTableUI
 class TitleTableWindow(QMainWindow):
     callArticleContent = pyqtSignal(dict)
     goBackToStartupSignal=pyqtSignal()
+    curPath = os.path.dirname(os.path.dirname(__file__))  # go to the parent folder location
     pageNum=0
+    totalPageNum=0
     def __init__(self, parent= None):
         super(TitleTableWindow, self).__init__(parent)
         self.ui=TitelTableUI.Ui_MainWindow()
@@ -36,7 +38,8 @@ class TitleTableWindow(QMainWindow):
         self.ui.label_loading.hide()
 
     def prePage(self):
-        self.pageNum=self.pageNum+1
+        if self.pageNum < self.totalPageNum-2:
+            self.pageNum=self.pageNum+1
         self.setButtonTitle()
 
 
@@ -49,7 +52,7 @@ class TitleTableWindow(QMainWindow):
     def getTitleAndArticleContent(self):
 
         #with open('crawler/output.json', 'r',encoding='utf-8') as f:
-        with open('output.json', 'r',encoding='utf-8') as f:
+        with open(TitleTableWindow.curPath + '\crawler\output.json', 'r',encoding='utf-8') as f:
             data = f.readlines()
 
         f.close()
@@ -57,7 +60,10 @@ class TitleTableWindow(QMainWindow):
             article=article[0:len(article)-2]
             article=json.loads(article)
             self.articleArray.append(article)
+            self.totalPageNum = self.totalPageNum + 1
             print(article)
+        self.totalPageNum = self.totalPageNum/6
+
 
 
 
@@ -85,5 +91,3 @@ class TitleTableWindow(QMainWindow):
     def btnExitClicked(self):
         print("Exit clicked")
         self.close()
-
-

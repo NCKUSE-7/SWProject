@@ -16,7 +16,7 @@ class startupWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.pushButton.clicked.connect(self.goToTitleTable)
         self.pushButton_2.clicked.connect(self.goToTitleTableFromBBC)
-        self.pushButton_3.clicked.connect(self.goToWHO)
+        self.pushButton_3.clicked.connect(self.goTOWHO)
         self.pushButton_4.clicked.connect(self.goToFlightInfo)
         '''
         self.pushButton_2.clicked.connect(self.goBackToTitleTable)
@@ -38,7 +38,10 @@ class startupWindow(QMainWindow, Ui_MainWindow):
 
     def goToTitleTableFromBBC(self):
         import os
-        if not os.path.exists("./BBC/src/data.json"):
+        import pathlib
+        path = str(pathlib.Path(__file__).parent.absolute())
+        path = '\\'.join(path.split('\\')[:-1])
+        if not os.path.exists(path + "/BBC/src/data.json"):
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
             msg.setText("Downloading new pictures...")

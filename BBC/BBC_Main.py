@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Mar 22 19:00:00 2020
-
 @author: 施崇祐
 """
 
@@ -65,9 +64,3 @@ class BBCWindow(QtWidgets.QMainWindow):
     def getData(self) -> Dict:
         with open(Ui_MainWindow.curPath + '/src/data.json', 'r') as f:
             return json.load(f)
-
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    bbc = BBCWindow()
-    bbc.show()
-    sys.exit(app.exec_())

@@ -11,6 +11,7 @@ import WHO.WHOMAIN
 from BBC.BBC_Main import BBCWindow
 from VirusCrawler.VirusCrawlerUImod import Flight
 
+
 class ViewController:
     def __init__(self):
         self.bbc = BBCWindow()
@@ -76,7 +77,7 @@ if __name__ == '__main__':
         import multiprocessing
         for t in multiprocessing.active_children():
             t.terminate()
-            t.close()
+#            t.close()
 
     app = QApplication(sys.argv)
     app.aboutToQuit.connect(myExitHandler)

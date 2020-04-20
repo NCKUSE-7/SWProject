@@ -6,10 +6,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from VirusCrawler.VirusCrawlerCode import crawler
 from VirusCrawler.VirusCrawlerUI import Ui_Flight
 from PyQt5.QtCore import *
-
+#import warnings
+import os
+#warnings.filterwarnings("ignore")
 
 class Flight(QtWidgets.QMainWindow):
     goBackToStartupSignal = pyqtSignal()
+    script_dir = os.path.dirname(__file__)
     def goBackToStartup(self):
         self.goBackToStartupSignal.emit()
         self.close()
@@ -17,8 +20,6 @@ class Flight(QtWidgets.QMainWindow):
         super(Flight, self).__init__()
         self.ui = Ui_Flight()
         self.ui.setupUi(self)
-#        self.ui.flighttable.hide()
-        #self.ui.retranslateUi(Fl)
         self._translate = QtCore.QCoreApplication.translate
         self.ui.flighttable.setColumnWidth(0, 125)
         self.ui.flighttable.setColumnWidth(1, 125)
@@ -28,23 +29,19 @@ class Flight(QtWidgets.QMainWindow):
         self.loaddata()
 
     def loaddata(self) :
-        #file_path = "C:/Users/user/PycharmProjects/SWProject/VirusCrawler/fi_out.json"
-        file_path = "C:/Users/user/PycharmProjects/SWProject-FlightInform/VirusCrawler/fi_out.json"
-        #with open('C:\Code\\flightinfo\VirusCrawler\\fi_out.json') as f:
-        with open(file_path) as f:
-                self.FData = json.load(f, encoding='utf-8')
+        file_path = Flight.script_dir + "\\fi_out.json"
+        with open(file_path, "r") as f:
+            self.FData = json.load(f, encoding='utf-8')
         num = len(self.FData)
         self.ui.flighttable.setRowCount(num)
-
         for i in range(num):
             for j in range(6):
                 if j == 3:
-
                     url = self.FData["flight" + str(i)][2]  # 'https://web.taoyuan-airport.com/upload/airlogo/CI.gif'
 #                   data = urllib.request.urlopen(url).read()
                     x = url.split('/')
                     try:  # prevent error caused by no local logo files
-                        image = Image.open('C:/Users/user/PycharmProjects/SWProject-FlightInform/VirusCrawler/pic/' + x[5])
+                        image = Image.open(Flight.script_dir + '/pic//' + x[5])
                         qimage = QtGui.QPixmap.fromImage(ImageQt(image))
                         icon = QtGui.QIcon()
                         icon.addPixmap(qimage, QtGui.QIcon.Normal, QtGui.QIcon.On)
@@ -53,16 +50,10 @@ class Flight(QtWidgets.QMainWindow):
                         print('There is no file named', x[5])
 
                     self.ui.flighttable.setItem(0, j, self.ui.item)
-#--------------------------------------------
-#                    image = QtGui.QImage()
-#                    image.loadFromData(data)
-#                    icon = QtGui.QIcon()
-#                    icon.addPixmap(QtGui.QPixmap(image), QtGui.QIcon.Normal, QtGui.QIcon.On)
-#                    self.ui.item.setIcon(icon)
-#                    self.ui.item = self.ui.flighttable.item(0, j)
-#---------------------------------------
+
                 self.ui.item = QtWidgets.QTableWidgetItem()
                 self.ui.flighttable.setItem(i, j, self.ui.item)
+
         for i in range(num):
             for j in range(6):
                 self.ui.item = self.ui.flighttable.item(i, j)
@@ -78,7 +69,7 @@ class Flight(QtWidgets.QMainWindow):
         self.loaddata()
 
     def itemActivated_event(self,item):
-        json_file = open("C:\Code\\flightinfo\VirusCrawler\jsonfiles\FlightUrl", "r", encoding='utf-8')
+        json_file = open(Flight.script_dir + "\jsonfiles\FlightUrl", "r", encoding='utf-8')
         Flight.FData = json.load(json_file)
         json_file.close()
         if (item.text() == '全亞州航空' or item.text() == '中華航空' or item.text() == '馬來西亞' or item.text() == '泰國獅子航空' or item.text() == '土耳其航空' \
@@ -91,8 +82,12 @@ class Flight(QtWidgets.QMainWindow):
                 or item.text() == '加拿大航空' or item.text() =='澳洲航空' or item.text() == '巴澤航空' or item.text() == '德國航空' or item.text() == '以色列航空')\
                 or item.text() == '真航空' or item.text() == '中國國際' or item.text() == '華信航空' or item.text() == '澳門航空':
             QtGui.QDesktopServices.openUrl(QtCore.QUrl(Flight.FData[item.text()]))
+        elif item.column() == 4:
+            murl = QtCore.QUrl('https://www.google.com/maps/dir/桃園機場/' + item.text() + '/')
+            QtGui.QDesktopServices.openUrl(murl)
         else:
-            print(item.text())
+            pass
+#            print(item.text())
 
 
 #def url_to_image(url):
@@ -115,3 +110,17 @@ if __name__ == "__main__":
     #    Fl.ui.setupUi(Fl)
     Fl.show()
     sys.exit(app.exec_())
+
+
+
+
+
+
+    # --------------------------------------------
+    #                    image = QtGui.QImage()
+    #                    image.loadFromData(data)
+    #                    icon = QtGui.QIcon()
+    #                    icon.addPixmap(QtGui.QPixmap(image), QtGui.QIcon.Normal, QtGui.QIcon.On)
+    #                    self.ui.item.setIcon(icon)
+    #                    self.ui.item = self.ui.flighttable.item(0, j)
+    # ---------------------------------------

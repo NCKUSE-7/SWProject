@@ -67,7 +67,6 @@ class MyGroupBox(QtWidgets.QGroupBox):
         self.picture.setScaledContents(True)
 
         # 設定圖片
-        print(self.picture_link)
         if self.picture_link not in Ui_MainWindow.webImageDict:
             Ui_MainWindow.webImageDict[self.picture_link] = QtGui.QPixmap(
                 QtGui.QImage(self.picture_link).smoothScaled(300, 225))
